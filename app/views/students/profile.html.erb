@@ -3,7 +3,8 @@
   <li>Здравствуйте, <%= current_student.first_name%> <%= current_student.last_name%></li>
   <li>ID: <%= current_student.student_id%></li>
   <li>Email: <%= current_student.email%> </li>
-  <li><%= link_to 'Изменить данные', edit_student_registration_path, :method => :delete %></li>
+  <li><%= link_to 'Изменить данные', edit_student_registration_path%></li>
+  <li><%= link_to 'Create lesson', newlesson_path%></li>
   <li><%= link_to 'Выйти', destroy_student_session_path, :method => :delete %></li>
 </ul>
 

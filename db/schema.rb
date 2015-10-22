@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022091509) do
+ActiveRecord::Schema.define(version: 20151022124419) do
+
+  create_table "custom_auto_increments", force: :cascade do |t|
+    t.string   "counter_model_name"
+    t.integer  "counter",            default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "custom_auto_increments", ["counter_model_name"], name: "index_custom_auto_increments_on_counter_model_name"
+
+  create_table "lesson_classes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "lessons", force: :cascade do |t|
     t.datetime "created_at", null: false
