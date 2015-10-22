@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Intranet</title>
+  </head>
+  <body>
+    <% if student_signed_in? %>
+    <span>Здравствуйте, <%= current_student.email %></span>
+    <%= link_to 'Выйти', destroy_student_session_path, :method => :delete %>
+<% else %>
+    <%= link_to 'Студент', new_student_session_path %> или <%= link_to 'Преподаватель', new_student_registration_path %> или <%= link_to 'Новый студент',new_student_registration_path%>
+<% end %>
+  </body>
+</html>

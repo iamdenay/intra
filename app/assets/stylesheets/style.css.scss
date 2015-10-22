@@ -1,0 +1,108 @@
+@import "bootstrap";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.row{
+    width: 100%;
+    margin: 0;
+}
+.left{
+    height: 100%;
+    padding: 0;
+    background: #049372;
+
+}
+.right{
+    height: 100%;
+    padding: 0;
+    background-color: whitesmoke;
+}
+.lgn{
+    width: 100%;
+    height: 300px;
+    margin-top: 30%;
+    font-family: Segoe UI light;
+}
+.acc{
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+input{
+    width: 50%;
+		border: 1px solid #16A085;
+		border-left: none;
+    margin-top: 20px;
+    -ms-user-select:none;
+}
+*:focus {
+    outline: 0;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+input[type=submit]{
+    background-color: transparent;
+    width: 250px;
+    height: 50px;
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+    border: 1px solid #16A085;
+    border-left: none;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    text-transform: uppercase;
+}
+.txt{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border: 1px solid #2ABB9B;
+    border-bottom: none;
+    border-left: none;
+}
+.pass{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border: 1px solid #2ABB9B;
+    border-left: none;
+}
+/*.sbmt{
+    background-color: black;
+    width: 250px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: none;
+}*/
+i {
+    margin-left: 30px;
+    color: #16A085;
+}
+img{
+    width: 300px;
+    height: 100px;
+    margin-top: 20%;
+    margin-left: 29%;
+}
+.welc{
+    width: 250px;
+    height: 300px;
+    margin-left: 220px;
+    margin-top: 45px;
+    font-family: Segoe UI light;
+    text-align: center;
+    color: white;
+}
+.welc p{
+    font-size: 30px;
+}
+.foot p{
+    color: whitesmoke;
+    margin:0;
+    margin-left: 27%;
+    font-size: 15px;
+}
