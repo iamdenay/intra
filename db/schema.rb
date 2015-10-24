@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022124419) do
+ActiveRecord::Schema.define(version: 20151024084153) do
 
   create_table "custom_auto_increments", force: :cascade do |t|
     t.string   "counter_model_name"
@@ -28,13 +28,27 @@ ActiveRecord::Schema.define(version: 20151022124419) do
   end
 
   create_table "lessons", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "room"
+    t.integer  "creditsNumber", default: 3
+    t.string   "discipline"
+    t.string   "day"
+    t.string   "time"
+    t.string   "teacher"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "student_id"
+    t.integer  "timesPerWeek"
   end
+
+  add_index "lessons", ["student_id"], name: "index_lessons_on_student_id"
 
   create_table "students", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
+    t.string   "first_name",                          null: false
+    t.string   "last_name",                           null: false
+    t.string   "student_id",                          null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -45,9 +59,10 @@ ActiveRecord::Schema.define(version: 20151022124419) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "student_id"
+    t.integer  "maxCredits"
+    t.integer  "currentCredits"
+    t.integer  "course"
+    t.string   "spec"
   end
 
   add_index "students", ["email"], name: "index_students_on_email", unique: true

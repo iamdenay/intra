@@ -1,12 +1,16 @@
 <% if student_signed_in? %>
 <ul>
-  <li>Здравствуйте, <%= current_student.first_name%> <%= current_student.last_name%></li>
-  <li>ID: <%= current_student.student_id%></li>
-  <li>Email: <%= current_student.email%> </li>
-  <li><%= link_to 'Изменить данные', edit_student_registration_path%></li>
-  <li><%= link_to 'Create lesson', newlesson_path%></li>
-  <li><%= link_to 'Выйти', destroy_student_session_path, :method => :delete %></li>
+  <li>-----------Hello, <font color="red"><%= current_student.first_name%> <%= current_student.last_name%></font></li>
+  <li>--------------ID: <font color="red"><%= current_student.student_id%></font></li>
+  <li>--------Course: <font color="red"><%= current_student.course%></font></li>
+  <li>Specialization: <font color="red"><%= current_student.spec%></font></li>
+  <li>----------Email: <font color="red"><%= current_student.email%></font> </li>
+  <br>
+  <li>Maximum number of credits: <%=current_student.maxCredits%></li>
+  <li>Current number of credits: <%=current_student.currentCredits%></li>
+  <li><%=link_to 'Schedule', schedule_path %></li>
+  <li><%= link_to 'Edit profile', edit_student_registration_path%></li>
+  <li><%= link_to 'Registraton on disciplines', newlesson_path%></li>
+  <li><%= link_to 'Logout', destroy_student_session_path, :method => :delete %></li>
 </ul>
-
-
-<% end %>
+<%end%>

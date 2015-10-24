@@ -4,10 +4,11 @@ class LessonsController < ApplicationController
 end
 
 def create
-  @lesson = Lesson.new(lesson_params)
-
+  @student = current_student
+  @lesson = @student.lessons.create(lesson_params)
+  
   if @lesson.save
-
+    redirect_to student_root_path
   else
     render 'new'
   end
@@ -15,6 +16,6 @@ end
 
 private
   def lesson_params
-    params.require(:lesson).permit(:name, :discipline, :day, :time, :teacher)
+    params.require(:lesson).permit(:name, :discipline, :room, :creditsNumber, :day, :time, :teacher)
   end
 end

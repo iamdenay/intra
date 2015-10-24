@@ -10,6 +10,7 @@ Rails.application.routes.draw do
    get 'students/profile', as: 'student_root'
    get 'students/edit' => 'registrations#edit'
    get 'lessons/new', as: 'newlesson'
+   get 'students/schedule', as: 'schedule'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

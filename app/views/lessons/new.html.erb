@@ -5,20 +5,26 @@
   </p>
 
   <p>
-    <%= f.label :room %><br>
-    <%= f.text_area :room %>
+    <%= f.label :teacher %><br>
+    <%= f.text_field :teacher %>
   </p>
+
   <p>
-    <%= f.label :"Number of credits" %><br>
-    <%= f.text_area :creditsNumber %>
+    <%= f.label :room %><br>
+    <%= f.text_field :room %>
   </p>
+
   <p>
     <%= f.label :discipline %><br>
-    <%= f.text_area :discipline %>
+    <%= f.text_field :discipline %>
   </p>
   <p>
     <%= f.label :day %><br>
     <%= f.select :day, options_for_select([["Monday"], ["Tuesday"],["Wednesday"],["Thursday"],["Friday"],["Saturday"],["Sunday"]]) %>
+  </p>
+  <p>
+    <%= f.label :time %><br>
+    <%= f.select :time, options_for_select([["8:00-8:50"], ["9:00-9:50"],["10:00-10:50"],["11:00-11:50"],["12:00-12:50"]]) %>
   </p>
   <p>
     <%= f.submit %>

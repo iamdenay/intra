@@ -1,13 +1,14 @@
 class CreateLessons < ActiveRecord::Migration
   def change
     create_table :lessons do |t|
-      t.string :name
-      t.string :room
-      t.integer :creditsNumber
-      t.string :discipline
-      t.string :day
-      t.string :time
-      t.string :teacher
+      t.string :name, null: false
+      t.string :room, null:false
+      t.integer :creditsNumber,null:false, default: => 3
+      t.string :discipline,null:false
+      t.string :day,null:false
+      t.string :time,null:false
+      t.string :teacher,null:false
+      t.references :student_id, index:true, foreign_key: true
 
       t.timestamps null: false
     end

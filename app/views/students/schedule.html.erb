@@ -1,0 +1,36 @@
+<% if student_signed_in? %>
+<ul>
+  
+  <li>
+    <h4>Your lessons:</h4>
+      <% @lessons.each do |lesson| %>
+        <%if lesson.day == "Monday"%>
+          <p>
+              ---<%=lesson.day%>---<%= lesson.name %>  at <%=lesson.time%> (Teacher: <%=lesson.teacher%>, Room:<%=lesson.room%> )
+          </p>
+
+        <%end%>
+      <%end%>
+        <% @lessons.each do |lesson| %>
+          <%if lesson.day == "Tuesday"%>
+            <p>
+                ---<%=lesson.day%>---<%= lesson.name %>  at <%=lesson.time%> (Teacher: <%=lesson.teacher%>, Room:<%=lesson.room%>)
+            </p>
+
+          <%end%>
+        <%end%>
+
+          <% @lessons.each do |lesson| %>
+            <%if lesson.day == "Friday"%>
+              <p>
+                  ---<%=lesson.day%>---<%= lesson.name %>  at <%=lesson.time%> (Teacher: <%=lesson.teacher%>, Room:<%=lesson.room%>)
+              </p>
+
+            <%end%>
+          <%end%>
+
+
+  </li>
+  <li><%= link_to 'Back', student_root_path %></li>
+</ul>
+<%end%>
