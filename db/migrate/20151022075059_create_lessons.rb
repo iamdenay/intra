@@ -3,7 +3,7 @@ class CreateLessons < ActiveRecord::Migration
     create_table :lessons do |t|
       t.string :name, null: false
       t.string :room, null:false
-      t.integer :creditsNumber,null:false, default: => 3
+      t.integer :creditsNumber,null:false
       t.string :discipline,null:false
       t.string :day,null:false
       t.string :time,null:false
